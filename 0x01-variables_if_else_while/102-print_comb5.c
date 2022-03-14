@@ -1,24 +1,31 @@
 #include <stdio.h>
 
 /**
- * main - prints the numbers from 00 to 99
- * Return: Always 0 (success)
+ * main - prints all possible combinations of two two-digit numbers
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int n, m;
+	int i, j;
 
-	for (n = 48; n <= 57; n++)
+	for (i = 0; i < 100; i++)
 	{
-		for (m = 48; m <= 57; m++)
+		for (j = 0; j < 100; j++)
 		{
-			putchar(n);
-			putchar(m);
-			if (n != 57 || m != 57)
+			if (i < j)
 			{
-				putchar(',');
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
 				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+				if (i != 98 || j != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
+
 		}
 	}
 	putchar('\n');
