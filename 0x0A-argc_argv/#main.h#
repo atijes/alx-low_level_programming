@@ -1,0 +1,10 @@
+/**
+ *This file contains the header file containing all the function prototypes used in the files.
+ */
+#ifndef FILE_MAIN
+#defineHOLBERTON
+
+int _putchar(char c);
+int _atoi(char *s);
+
+#endif
